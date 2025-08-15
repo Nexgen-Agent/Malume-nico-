@@ -4,12 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Malume Nico — the kota the mhhh</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../static/css/styles.css" />
+  <link rel="preload" as="image" href="../static/svg/logo.svg" />
 </head>
 <body>
 
-  <!-- Sticky luxury navbar -->
+  <!-- ==================== PRELOADER ==================== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <img src="../static/svg/logo.svg" alt="" class="pre-logo" />
+      <div class="pre-title">Malume Nico</div>
+      <div class="pre-sub">the kota the mhhh</div>
+      <div class="pre-bar">
+        <div class="pre-bar-fill" id="preProgress" style="width:0%"></div>
+      </div>
+      <div class="pre-tip">Preparing the gold…</div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#home">
@@ -23,29 +36,27 @@
         <a href="#about">About</a>
         <a href="#highlights">Highlights</a>
         <a href="#venue">Venue</a>
-        <a href="#contact" class="btn tiny">Contact</a>
+        <a href="#contact" class="btn tiny" data-press-glow>Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero / above the fold -->
+  <!-- ==================== HERO ==================== -->
   <section id="home" class="hero">
     <div class="hero-media">
-      <!-- Decorative gold shimmer -->
       <div class="gold-sheen"></div>
       <div class="grain"></div>
     </div>
     <div class="container hero-content">
-      <h1 class="headline fade-in">Kasi luxury, plated in gold.</h1>
-      <p class="subhead fade-in delay-1">
+      <h1 class="headline reveal" data-reveal="up">Kasi luxury, plated in gold.</h1>
+      <p class="subhead reveal" data-reveal="up" data-delay="100">
         A destination where the kota is theater — warm, golden, unforgettable.
       </p>
-      <div class="actions fade-in delay-2">
-        <a href="#highlights" class="btn cta">Explore Highlights</a>
-        <a href="#venue" class="btn ghost">Book a Venue</a>
+      <div class="actions reveal" data-reveal="up" data-delay="200">
+        <a href="#highlights" class="btn cta" data-press-glow>Explore Highlights</a>
+        <a href="#venue" class="btn ghost" data-press-glow>Book a Venue</a>
       </div>
-      <!-- Floating hero badge (pure SVG) -->
-      <div class="hero-plate fade-in delay-3" aria-hidden="true">
+      <div class="hero-plate reveal" data-reveal="fade" data-delay="300" aria-hidden="true">
         <svg viewBox="0 0 200 200">
           <defs>
             <radialGradient id="plateGrad" cx="50%" cy="50%" r="60%">
@@ -61,10 +72,10 @@
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ==================== ABOUT ==================== -->
   <section id="about" class="section">
     <div class="container split">
-      <div class="copy fade-in">
+      <div class="copy reveal" data-reveal="up">
         <h2>About Malume Nico</h2>
         <p>
           We turn comfort into ceremony. From the first aroma to the last bite,
@@ -75,7 +86,7 @@
           where every visit feels like a celebration.
         </p>
       </div>
-      <div class="feature-card fade-in delay-1" role="img" aria-label="Luxurious interior illustration">
+      <div class="feature-card reveal" data-reveal="scale" data-delay="100" role="img" aria-label="Luxurious interior illustration">
         <div class="rays"></div>
         <div class="card-title">Golden Hearth</div>
         <div class="card-sub">Comfort, elevated</div>
@@ -83,45 +94,48 @@
     </div>
   </section>
 
-  <!-- Highlights (teaser for menu page) -->
+  <!-- ==================== HIGHLIGHTS ==================== -->
   <section id="highlights" class="section soft">
     <div class="container">
-      <h2 class="center">House Highlights</h2>
+      <h2 class="center reveal" data-reveal="up">House Highlights</h2>
       <div class="grid">
-        <article class="card fade-in">
+        <article class="card reveal" data-reveal="up">
           <h3>Signature Kota — Golden</h3>
           <p>Kota with truffle mayo & a delicate gold crunch.</p>
           <div class="pill">R89</div>
+          <button class="btn tiny" data-press-glow>Add to plan</button>
         </article>
-        <article class="card fade-in delay-1">
+        <article class="card reveal" data-reveal="up" data-delay="100">
           <h3>Smoke & Silk</h3>
           <p>Slow-smoked beef, silky jus, and curated sauces.</p>
           <div class="pill">Chef’s pick</div>
+          <button class="btn tiny" data-press-glow>Add to plan</button>
         </article>
-        <article class="card fade-in delay-2">
+        <article class="card reveal" data-reveal="up" data-delay="200">
           <h3>Coastline Curation</h3>
           <p>Line-caught fish with bright citrus slaw.</p>
           <div class="pill">Fresh daily</div>
+          <button class="btn tiny" data-press-glow>Add to plan</button>
         </article>
       </div>
-      <div class="center mt">
-        <a href="#venue" class="btn">Plan a celebration</a>
+      <div class="center mt reveal" data-reveal="up" data-delay="300">
+        <a href="#venue" class="btn" data-press-glow>Plan a celebration</a>
       </div>
     </div>
   </section>
 
-  <!-- Venue banner -->
+  <!-- ==================== VENUE BANNER ==================== -->
   <section id="venue" class="banner">
     <div class="container banner-inner">
-      <div class="banner-copy fade-in">
+      <div class="banner-copy reveal" data-reveal="up">
         <h2>Book the venue — birthdays, showers, private dining</h2>
         <p>Premium booths, curated menus, and a team that hosts like family.</p>
       </div>
-      <a href="#contact" class="btn cta fade-in delay-1">Enquire Now</a>
+      <a href="#contact" class="btn cta reveal" data-reveal="up" data-delay="150" data-press-glow>Enquire Now</a>
     </div>
   </section>
 
-  <!-- Footer / contact -->
+  <!-- ==================== FOOTER ==================== -->
   <footer id="contact" class="footer">
     <div class="container foot-grid">
       <div>
@@ -150,4 +164,4 @@
 
   <script src="../static/js/main.js" defer></script>
 </body>
-                                                  </html>
+</html>
